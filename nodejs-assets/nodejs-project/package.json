@@ -5,9 +5,11 @@
   "main": "main.js",
   "author": "staltz.com",
   "dependencies": {
+    "@jimpick/node-gyp-build": "npm:@jimpick/node-gyp-build@3.3.0-3",
+    "@jimpick/utp-native": "npm:@jimpick/utp-native",
     "cabal-node": "2.1.1",
     "hyperdiscovery": "^7.1.1",
-    "node-gyp-build": "npm:@jimpick/node-gyp-build@3.3.0-2",
+    "node-gyp-build": "npm:@jimpick/node-gyp-build@3.3.0-3",
     "pull-stream": "3.6.8",
     "pump": "^3.0.0",
     "random-access-memory": "^3.0.0",
@@ -18,7 +20,7 @@
     "utp-native": "npm:@jimpick/utp-native"
   },
   "resolutions": {
-    "node-gyp-build": "npm:@jimpick/node-gyp-build@3.3.0-2",
+    "node-gyp-build": "npm:@jimpick/node-gyp-build@3.3.0-3",
     "sodium-utp": "npm:@jimpick/utp-native"
   },
   "license": "GPLv3"
