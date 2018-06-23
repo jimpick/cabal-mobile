@@ -2,11 +2,16 @@ var fs = require('fs');
 var path = require('path');
 var rimraf = require('rimraf');
 var frontend = require('rn-bridge');
-var Cabal = require('cabal-node');
-var cabalSwarm = require('cabal-node/swarm.js');
 // const myaddon = require('myaddon')
 
 console.log('Jim process.versions.modules', process.versions.modules)
+
+const sodiumNativePrebuildsDir = path.resolve(
+  __dirname, 'node_modules/sodium-native-prebuilds-nodejs-mobile'
+)
+console.log('Jim1 sodiumNativePrebuildsDir', sodiumNativePrebuildsDir)
+console.log('Jim2', fs.readdirSync(sodiumNativePrebuildsDir))
+process.env.SODIUM_NATIVE_PREBUILD = sodiumNativePrebuildsDir
 
 var cabal;
 
@@ -28,9 +33,9 @@ function startOrJoin(key, nick) {
     path.resolve(__dirname, '..', 'db');
   var dir = path.resolve(dbPath, starting ? 'myinstance' : key);
 
-  console.log('Jim1 __dirname', __dirname)
-  console.log('Jim2', fs.readdirSync(__dirname))
   // /private/var/containers/Bundle/Application/66D9B3C1-609B-4F8F-8DB9-015E62A78261/cabalmobile.app/
+  var Cabal = require('cabal-node');
+  var cabalSwarm = require('cabal-node/swarm.js');
   const hypercore = require('hypercore')
   const ram = require('random-access-memory')
   const hyperdiscovery = require('hyperdiscovery')

@@ -488,9 +488,9 @@ network-address@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/network-address/-/network-address-1.1.2.tgz#4aa7bfd43f03f0b81c9702b13d6a858ddb326f3e"
 
-node-gyp-build@^3.0.0, "node-gyp-build@npm:@jimpick/node-gyp-build":
-  version "3.3.0-1"
-  resolved "https://registry.npmjs.org/@jimpick/node-gyp-build/-/node-gyp-build-3.3.0-1.tgz#793b007fae232b0dec93f558fad114c069af2e89"
+node-gyp-build@^3.0.0, "node-gyp-build@npm:@jimpick/node-gyp-build@3.3.0-2":
+  version "3.3.0-2"
+  resolved "https://registry.npmjs.org/@jimpick/node-gyp-build/-/node-gyp-build-3.3.0-2.tgz#b7d2a394e6c468a088a469534e0e8653fc2bf1e8"
 
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
@@ -619,9 +619,13 @@ sodium-javascript@~0.5.0:
     siphash24 "^1.0.1"
     xsalsa20 "^1.0.0"
 
-sodium-native@^2.0.0, "sodium-native@npm:@jimpick/sodium-native":
-  version "2.1.6-2"
-  resolved "https://registry.npmjs.org/@jimpick/sodium-native/-/sodium-native-2.1.6-2.tgz#7eb24f54ae5933d46b8c04adecbeb812088573ea"
+sodium-native-prebuilds-nodejs-mobile@^2.1.6-4:
+  version "2.1.6-4"
+  resolved "https://registry.npmjs.org/sodium-native-prebuilds-nodejs-mobile/-/sodium-native-prebuilds-nodejs-mobile-2.1.6-4.tgz#6e71e166ba09cc142e2b9819f7870b16c2f9950a"
+
+sodium-native@^2.0.0:
+  version "2.1.6"
+  resolved "https://registry.npmjs.org/sodium-native/-/sodium-native-2.1.6.tgz#4c130a61fe4cddf029d14f6f61489a2efde49cad"
   dependencies:
     ini "^1.3.5"
     nan "^2.4.0"
@@ -634,6 +638,14 @@ sodium-universal@^2.0.0:
     sodium-javascript "~0.5.0"
   optionalDependencies:
     sodium-native "^2.0.0"
+
+"sodium-utp@npm:@jimpick/utp-native", "utp-native@npm:@jimpick/utp-native":
+  version "1.7.1-1"
+  resolved "https://registry.npmjs.org/@jimpick/utp-native/-/utp-native-1.7.1-1.tgz#9c0965a853a5f9b5989ca16ab5d0b1083824c301"
+  dependencies:
+    nan "^2.5.1"
+    node-gyp-build "^3.0.0"
+    readable-stream "^2.2.2"
 
 sorted-indexof@^1.0.0:
   version "1.0.0"
