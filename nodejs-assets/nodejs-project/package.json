@@ -6,9 +6,19 @@
   "author": "staltz.com",
   "dependencies": {
     "cabal-node": "2.1.1",
-    "stream-to-pull-stream": "1.7.2",
+    "hyperdiscovery": "^7.1.1",
+    "node-gyp-build": "npm:@jimpick/node-gyp-build",
     "pull-stream": "3.6.8",
-    "rimraf": "2.6.2"
+    "pump": "^3.0.0",
+    "random-access-memory": "^3.0.0",
+    "rimraf": "2.6.2",
+    "sodium-native": "npm:@jimpick/sodium-native",
+    "stream-to-pull-stream": "1.7.2",
+    "through2": "^2.0.3"
+  },
+  "resolutions": {
+    "node-gyp-build": "npm:@jimpick/node-gyp-build",
+    "sodium-native": "npm:@jimpick/sodium-native"
   },
   "license": "GPLv3"
 }

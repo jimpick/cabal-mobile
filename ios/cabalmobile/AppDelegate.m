@@ -19,6 +19,8 @@
   /* Find db directory */
   NSString* dbPath = [NSString stringWithFormat:@"%@/db", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]];
   setenv("DB_PATH", [dbPath UTF8String], 1);
+//  setenv("DEBUG", "discovery-channel", 1);
+  setenv("DEBUG_COLORS", "false", 1);
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 

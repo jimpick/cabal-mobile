@@ -1,0 +1,5 @@
+#!/bin/bash
+      # Helper script for Gradle to call npm on macOS in case it is not found
+      export PATH=$PATH:/opt/node/node-v10.3.0-darwin-x64/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/jim/whimsio/2018-06-rootcache/cabal-mobile/node_modules/nodejs-mobile-react-native/node_modules/.bin:/Users/jim/whimsio/2018-06-rootcache/cabal-mobile/node_modules/.bin:/Users/jim/install/google-cloud-sdk/bin:/usr/local/heroku/bin:/opt/local/bin:/opt/local/sbin:/Users/jim/.yarn/bin:/Users/jim/gocode/bin:/Users/jim/projects/kaldi/kaldi/tools/openfst/bin/:/opt/node/node-v10.3.0-darwin-x64/bin:/usr/local/heroku/bin:/Users/jim/projects/camlistore/camlistore/bin:/usr/local/go/bin:/Users/jim/Library/Android/sdk//platform-tools/:/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/jim/clients/reelhouse/obloq/bin:/Developer/usr/bin:/usr/local/mysql/bin:/opt/mongo/bin:/usr/local/bin:/usr/local/sbin:/Users/jim/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:/usr/local/git/bin:/Users/jim/bin
+      npm $@
+    
