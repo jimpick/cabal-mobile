@@ -1356,6 +1356,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.backblend.cabalmobile;
 				PRODUCT_NAME = cabalmobile;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1383,6 +1384,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.backblend.cabalmobile;
 				PRODUCT_NAME = cabalmobile;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
