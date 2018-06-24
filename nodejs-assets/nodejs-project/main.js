@@ -2,16 +2,14 @@ var fs = require('fs');
 var path = require('path');
 var rimraf = require('rimraf');
 var frontend = require('rn-bridge');
-// const myaddon = require('myaddon')
 
-console.log('Jim process.versions.modules', process.versions.modules)
-
-const sodiumNativePrebuildsDir = path.resolve(
-  __dirname, 'node_modules/sodium-native-prebuilds-nodejs-mobile'
-)
-console.log('Jim1 sodiumNativePrebuildsDir', sodiumNativePrebuildsDir)
-console.log('Jim2', fs.readdirSync(sodiumNativePrebuildsDir))
-process.env.SODIUM_NATIVE_PREBUILD = sodiumNativePrebuildsDir
+var prebuilds = ['sodium-native', 'utp-native'];
+prebuilds.forEach(pkgName => {
+  var pkgJson = pkgName + '-prebuilds-nodejs-mobile/package.json';
+  var dir = path.dirname(require.resolve(pkgJson));
+  var envKey = pkgName.toUpperCase().replace(/\-/g, '_') + '_PREBUILD';
+  process.env[envKey] = dir;
+});
 
 var cabal;
 
@@ -36,13 +34,15 @@ function startOrJoin(key, nick) {
   // /private/var/containers/Bundle/Application/66D9B3C1-609B-4F8F-8DB9-015E62A78261/cabalmobile.app/
   var Cabal = require('cabal-node');
   var cabalSwarm = require('cabal-node/swarm.js');
+
+  /*
   const hypercore = require('hypercore')
   const ram = require('random-access-memory')
   const hyperdiscovery = require('hyperdiscovery')
   const pump = require('pump')
   const through2 = require('through2')
+  */
 
-  // console.log('Jim1 myaddon', myaddon.length('testtest'))
   /*
   if (fs.existsSync(dir)) rimraf.sync(dir);
   key = '4d88ea1069d52badf29494b2029e5ec078f8b63a1b6d0fc18f5edaf86668e613'

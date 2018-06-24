@@ -2,17 +2,9 @@
 # yarn lockfile v1
 
 
-"@jimpick/node-gyp-build@npm:@jimpick/node-gyp-build@3.3.0-3", node-gyp-build@^3.0.0, "node-gyp-build@npm:@jimpick/node-gyp-build@3.3.0-3":
-  version "3.3.0-3"
-  resolved "https://registry.npmjs.org/@jimpick/node-gyp-build/-/node-gyp-build-3.3.0-3.tgz#17766386b49351e5b15c04a3c269ef2d80ffe96d"
-
-"@jimpick/utp-native@npm:@jimpick/utp-native", "sodium-utp@npm:@jimpick/utp-native", "utp-native@npm:@jimpick/utp-native":
-  version "1.7.1-1"
-  resolved "https://registry.npmjs.org/@jimpick/utp-native/-/utp-native-1.7.1-1.tgz#9c0965a853a5f9b5989ca16ab5d0b1083824c301"
-  dependencies:
-    nan "^2.5.1"
-    node-gyp-build "^3.0.0"
-    readable-stream "^2.2.2"
+"@jimpick/node-gyp-build@npm:@jimpick/node-gyp-build@3.3.0-2", "node-gyp-build@npm:@jimpick/node-gyp-build@3.3.0-2":
+  version "3.3.0-2"
+  resolved "https://registry.npmjs.org/@jimpick/node-gyp-build/-/node-gyp-build-3.3.0-2.tgz#b7d2a394e6c468a088a469534e0e8653fc2bf1e8"
 
 array-lru@^1.1.0, array-lru@^1.1.1:
   version "1.1.1"
@@ -500,6 +492,10 @@ network-address@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/network-address/-/network-address-1.1.2.tgz#4aa7bfd43f03f0b81c9702b13d6a858ddb326f3e"
 
+node-gyp-build@^3.0.0, "node-gyp-build@npm:@jimpick/node-gyp-build@3.3.0-3":
+  version "3.3.0-3"
+  resolved "https://registry.npmjs.org/@jimpick/node-gyp-build/-/node-gyp-build-3.3.0-3.tgz#17766386b49351e5b15c04a3c269ef2d80ffe96d"
+
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -722,6 +718,10 @@ unordered-set@^2.0.0:
 util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
+
+utp-native-prebuilds-nodejs-mobile@^1.7.1-1:
+  version "1.7.1-1"
+  resolved "https://registry.npmjs.org/utp-native-prebuilds-nodejs-mobile/-/utp-native-prebuilds-nodejs-mobile-1.7.1-1.tgz#73df78d7676dee4b9013b2c68eb18cdb31375ff0"
 
 utp-native@^1.7.0:
   version "1.7.1"
