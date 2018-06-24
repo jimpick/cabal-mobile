@@ -1,12 +1,14 @@
 # Cabal Mobile
 
-Chat with the p2p swarm on your mobile device (Android & maybe iOS).
+Chat with the p2p swarm on your mobile device (Android & iOS).
 
 <img src="./screenshot.jpg" width="240">
 
 ## Install
 
-Not yet on the Play Store, so fetch the APK from the Releases page here in GitHub and then install locally on your device (put it in developer mode first).
+- Through GitHub Releases: [APK file](https://github.com/cabal-club/cabal-mobile/releases/download/1.0/app-release.apk)
+- Through [Dat Installer](https://github.com/staltz/dat-installer/): `dat://199c8ad61f269fb243425895e315fab8fd2a8f96ced1c82899aea1895d9473ec`
+- ~~From the Play Store: not yet~~
 
 ## Development
 
@@ -28,8 +30,14 @@ npm install
 Then run
 
 ```bash
-react-native run-android
+npm run run-android
+# or
+npm run run-ios
 ```
+
+## Troubleshooting
+
+#### Android
 
 If things go wrong, try rebuilding the backend:
 
@@ -37,8 +45,12 @@ If things go wrong, try rebuilding the backend:
 cd android
 ./gradlew clean
 cd ..
-react-native run-android
+npm run run-android
 ```
+
+#### iOS
+
+...
 
 ## License
 
