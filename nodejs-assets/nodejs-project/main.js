@@ -11,6 +11,7 @@ prebuilds.forEach(pkgName => {
   var dir = path.dirname(require.resolve(pkgJson));
   var envKey = pkgName.toUpperCase().replace(/\-/g, '_') + '_PREBUILD';
   process.env[envKey] = dir;
+  console.log('Jim prebuild', dir, fs.readdirSync(dir));
 });
 
 
