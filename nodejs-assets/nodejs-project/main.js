@@ -13,6 +13,8 @@ prebuilds.forEach(pkgName => {
   process.env[envKey] = dir;
 });
 
+process.env.DEBUG = 'discovery-swarm';
+process.env.DEBUG_COLORS = 'no';
 
 frontend.channel.send(
   JSON.stringify({type: 'init', text: 'Node was initialized.'}),
@@ -35,8 +37,10 @@ function startOrJoin(key, nick) {
     path.resolve(__dirname, '..', 'db');
   var dir = path.resolve(dbPath, starting ? 'myinstance' : key);
   if (starting && fs.existsSync(dir)) rimraf.sync(dir);
+  console.log('Jim main startOrJoin')
   cabal = Cabal(dir, starting ? null : key, {username: nick});
   cabal.db.on('ready', function() {
+    console.log('Jim main startOrJoin ready')
     if (starting) cabal.joinChannel('default');
     const key = cabal.db.key.toString('hex');
     frontend.channel.send(JSON.stringify({type: 'ready', key}));
