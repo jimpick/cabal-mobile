@@ -5,6 +5,8 @@ var frontend = require('rn-bridge');
 
 var cabal;
 
+console.log('Jim process.versions.modules', process.versions.modules)
+
 var prebuilds = ['sodium-native', 'utp-native'];
 prebuilds.forEach(pkgName => {
   var pkgJson = pkgName + '-prebuilds-nodejs-mobile/package.json';
@@ -44,7 +46,7 @@ function startOrJoin(key, nick) {
     if (starting) cabal.joinChannel('default');
     const key = cabal.db.key.toString('hex');
     frontend.channel.send(JSON.stringify({type: 'ready', key}));
-    cabalSwarm(cabal);
+    const swarm = cabalSwarm(cabal);
     cabal.getChannels(sendChannels);
   });
 }
